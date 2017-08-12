@@ -1,0 +1,78 @@
+<h1>
+  test-directive1 works!
+</h1>
+
+<div>
+  <div ngClass="gray-border purple">string of classes</div>
+  <div [ngClass]="'gray-border purple'">string of classes</div>
+  <div [ngClass]="['gray-border', 'green']">array of classes</div>
+  <div [ngClass]="{'gray-border': true, 'blue': true}">object/map of classes</div>
+  <button [ngClass]="{active: isActive}" (click)="isActive = !isActive">Click me</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Test ngSwitch</h1>
+<button (click)="value=1">select - 1</button>
+<button (click)="value=2">select - 2</button>
+<button (click)="value=3">select - 3</button>
+<h5>You selected : {{value}}</h5>
+
+<hr>
+<div [ngSwitch]="value">
+
+  <div *ngSwitchCase="1">1. Template - <b>{{value}}</b> </div>
+  <div *ngSwitchCase="2">2. Template - <b>{{value}}</b> </div>
+  <div *ngSwitchCase="3">3. Template - <b>{{value}}</b> </div>
+  <div *ngSwitchDefault>Default Template</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<hr>
+<hr>
+<hr>
+
+
+<h2>Test Directive</h2>
+<p appD1>Highlight me!</p>
+
+
+<h1>My First Attribute Directive</h1>
+
+<h4>Pick a highlight color</h4>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+
+<p [appD1]="color" defaultColor="violet">
+  Highlight me too!
+</p>

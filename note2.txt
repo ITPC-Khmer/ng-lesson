@@ -1,0 +1,15 @@
+Property Binding Example
+
+There are 3 ways to define a property binding in Angular:
+
+  <img src="{{ angularLogo }}">
+  <img [src]="angularLogo">
+  <img bind-src="angularLogo">
+
+
+export class AppComponent {
+
+  angularLogo = 'https://angular.io/resources/images/logos/angular2/angular.png';
+
+}
+

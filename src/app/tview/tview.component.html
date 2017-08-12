@@ -1,0 +1,116 @@
+<p>
+  tview works!
+</p>
+
+<ul>
+  <li *ngFor="let x of data">{{ x }}</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Loop Data 3</h1>
+<ul *ngFor="let row of data3;
+let i = index;
+let c = count;
+let o = odd;
+let e = even;
+let f = first;
+let l = last;"
+
+
+
+
+
+
+
+    [ngClass]="{
+      'odd-active': o,
+      'even-active': e
+    }"
+
+    [ngClass]="{
+      'first-active': f,
+      'last-active': l
+    }">
+
+  <li> F : {{ f }}</li>
+  <li> L : {{ l }}</li>
+  <li>Index: {{ i }}</li>
+  <li>Count: {{ c }}</li>
+  <li>{{ row.id }}</li>
+  <li>{{ row.name }}</li>
+  <li>{{ row.sex }}</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+<h1 *ngIf="b">Test ngIf OK</h1>
+
+<h1 *ngIf="!b">Test ngIf No</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Test else if</h1>
+<ul *ngIf="b; else otherTmpl">
+  <li *ngFor="let x of data2">{{ x }}</li>
+</ul>
+<ng-template #otherTmpl>No, I do.</ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Test else if 2</h1>
+<div *ngIf="b; then tmpl1 else tmpl2"></div>
+
+<ng-template #tmpl1>I'm here OK</ng-template>
+<ng-template #tmpl2>I'm not here NO</ng-template>

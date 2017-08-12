@@ -1,0 +1,32 @@
+Creating module
+
+	ng generate module app2 -m app.module.ts
+
+- Creating component
+
+	ng generate component component_name
+
+	ng generate component app2/component_name -m app2/app2.module.ts
+
++View Encapsulation
+
+		The valid values for this config property are:
+
+			ViewEncapsulation.Native     			// apply current and child
+
+			ViewEncapsulation.Emulated				// apply only current
+
+			ViewEncapsulation.None					// apply all
+
+
+		import { Component } from '@angular/core';
+		import {MyClass2} from './helpers/my-class2';
+
+		@Component({
+		  selector: 'app-root',
+		  templateUrl: './app.component.html',
+		  styleUrls: ['./app.component.css'],
+		  encapsulation: ViewEncapsulation.Emulated
+		  // encapsulation: ViewEncapsulation.Native
+		  // encapsulation: ViewEncapsulation.None
+		})
