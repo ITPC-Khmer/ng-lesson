@@ -10,4 +10,6 @@ export class AppComponent {
   title = 'app';
   data = ['a', 'b', 'c'];
   x = 'Dara';
+  gender = 'other';
+  inviteMap: any = {'male': 'Invite him.', 'female': 'Invite her.', 'other': 'Invite them.'};
 }
